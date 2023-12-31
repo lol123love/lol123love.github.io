@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url('../images/cursor.png'), auto;
+}
+
+.mcpedl {
+  max-width: 30px;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+.home {
+  max-width: 30px;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+::-webkit-scrollbar {
+  width: 2px;  /* Adjust the width to make it thinner */
+}
+
+/* Style the track (the area around the scrollbar) */
+::-webkit-scrollbar-track {
+  background-image: url(../images/background.jpg);
+}
+
+/* Style the handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+  width: 2px;  /* Adjust the width to make it thinner */
+}
+
+/* Style the handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  height: 50px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hide the popup off-screen to the left */
+  width: 300px;
+  height: 100%;
+  background-image: url('../images/background.jpg');
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease-out;
+  z-index: 999;
+}
+
+.popup.show {
+  left: 0;
+  margin-top: 50px;
+}
+
+#menuBtn {
+  order: -1; /* Move the menu button to the start of the flex container */
+  margin-left: 20px; /* Add margin for spacing */
+}
+#menuBtn img {
+  max-width: 40px;
+  margin-top: 15px;
+}
+
+#closeBtn {
+  transform: scale(0.8);
+  float: right; /* Float the button to the right */
+}
+
+
+.section-game{
+  display: flex;
+  flex-direction: column; /* Display children in a column */
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/background.jpg');
+  background-size: cover; /* Adjust the background size as needed */
+  height: 500px; /* Adjust the height as needed */
+  padding-top: 20px;
+}
+.section-game img{
+  max-width: 100px;
+  border-radius: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column; /* Display children in a column */
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/background.jpg');
+  background-size: cover; /* Adjust the background size as needed */
+  height: 500px; /* Adjust the height as needed */
+  text-align: center;
+}
+
+
+.section img {
+  border-radius: 20px;
+  max-width: 40%; /* Make ../images responsive */
+  height: auto;
+  display: block; /* Change to block to center properly */
+  margin-bottom: 10px; /* Add some space between image and button */
+
+  /* Animation */
+  transform: scale(0);
+  animation: scaleIn 1s ease-out forwards;
+}
+
+.section p {
+  width: 50%;
+  font-size: 20px;
+  margin: 0 auto; /* This will center the paragraph horizontally */
+}
+
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.section img:hover {
+   scale: 1.1;
+}
+
+a {
+  cursor: url('../images/cursor-pointer.png'), auto;
+}
+
+button {
+  padding: 10px;
+  cursor: url('../images/cursor-pointer.png'), auto;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  background-color: transparent;
+  font-family: Arial;
+  margin-top: 10px; /* Add margin at the top */
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section button img {
+  max-width: 150px; /* Set the maximum width for the image */
+  height: auto;
+  margin-right: 5px; /* Add some space between text and image */
+}
+
+
+.section button img:hover {
+  transform: scale(1.5);
+}
+
+.image-title{
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 30px; 
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  color: black; 
+}
+
+p{
+  font-family: VT323;
+  font-size: 30px; 
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  color: black; 
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 5%;
+  }
+
+  .title {
+    padding: 10px;
+  }
+
+  .section {
+    height: auto;
+  }
+
+  .section img {
+    max-width: 80%;
+  }
+
+  .popup.show {
+    margin-top: 100px;
+  }
+}
