@@ -1,0 +1,43 @@
+ /* Popup container */
+ .popup1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Popup content */
+.popup-content1 {
+  background-color: #f2f2f2;
+  margin: 15% auto; /* Center the popup vertically and horizontally */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center; /* Center text */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+}
+
+/* Buttons */
+.button1 {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for buttons */
+  border: none;
+  background-color: #808080; /* Grey */
+  color: white;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.button1:hover {
+  background-color: #6d6d6d; /* Darker grey on hover */
+}
+.popup-content1 h4{
+  color: #555;
+}
